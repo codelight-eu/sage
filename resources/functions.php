@@ -47,18 +47,38 @@ if (!class_exists('Roots\\Sage\\Container')) {
     require_once $composer;
 }
 
+if (!class_exists("ACF")) {
+    if (!is_admin()) {
+        $sage_error('You must install and activate Advanced Custom Fields.');
+    }
+}
+
 /**
  * Sage required files
  *
  * The mapped array determines the code library included in your theme.
  * Add or remove files to the array as needed. Supports child theme overrides.
+ *
+ * You most likely don't need to touch these files.
  */
 array_map(function ($file) use ($sage_error) {
     $file = "../app/{$file}.php";
     if (!locate_template($file, true, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
     }
-}, ['helpers', 'setup', 'filters', 'admin']);
+}, ['helpers', 'setup', 'filters']);
+
+/**
+ * Theme-specific required files
+ *
+ * Feel free to modify these files as you need
+ */
+array_map(function ($file) use ($sage_error) {
+    $file = "../src/{$file}.php";
+    if (!locate_template($file, true, true)) {
+        $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
+    }
+}, ['helpers', 'setup', 'app']);
 
 /**
  * Here's what's happening with these hooks:

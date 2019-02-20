@@ -1,5 +1,5 @@
 {{--
-  Template Name: Custom Template
+  Template Name: Static Content
 --}}
 
 @extends('layouts.app')
