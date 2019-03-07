@@ -11,15 +11,11 @@
  */
 // @import "~some-node-module";
 
-/** Import theme styles */
+/** Import theme common styles */
 @import "common/global";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
+
+/** Import theme component styles */
 @import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
+
+/** Import theme layout styles */
 @import "layouts/tinymce";
