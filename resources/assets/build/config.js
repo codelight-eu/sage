@@ -1,6 +1,7 @@
 const path = require('path');
 const { argv } = require('yargs');
 const merge = require('webpack-merge');
+const glob = require("glob");
 
 const desire = require('./util/desire');
 
@@ -28,6 +29,9 @@ const config = merge({
     watcher: !!argv.watch,
   },
   watch: [],
+  entry: {
+    'sprites': glob.sync(path.join(rootPath,'resources/assets/svg-sprites/*.svg')),
+  },
 }, userConfig);
 
 module.exports = merge(config, {

@@ -2,11 +2,13 @@
 
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const path = require('path');
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const desire = require('./util/desire');
 const config = require('./config');
@@ -49,6 +51,21 @@ let webpackConfig = {
         test: /\.(js|s?[ca]ss)$/,
         include: config.paths.assets,
         loader: 'import-glob',
+      },
+      {
+        test: /\.svg$/,
+        include: path.join(config.paths.assets, 'svg-sprites'),
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              symbolId: 'shape-[name]',
+              extract: true,
+              spriteFilename: 'svg-sprites/sprites.svg',
+            },
+          },
+          'svgo-loader',
+        ],
       },
       {
         test: /\.js$/,
@@ -102,6 +119,7 @@ let webpackConfig = {
       {
         test: /\.(ttf|otf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
         include: config.paths.assets,
+        exclude: path.join(config.paths.assets, 'svg-sprites'),
         loader: 'url',
         options: {
           limit: 4096,
@@ -138,6 +156,7 @@ let webpackConfig = {
       root: config.paths.root,
       verbose: false,
     }),
+    new SpriteLoaderPlugin(),
     /**
      * It would be nice to switch to copy-webpack-plugin, but
      * unfortunately it doesn't provide a reliable way of
