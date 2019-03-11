@@ -61,7 +61,7 @@ let webpackConfig = {
             options: {
               symbolId: 'shape-[name]',
               extract: true,
-              spriteFilename: `svg-sprites/sprites${config.enabled.cacheBusting && '_[hash:8]'}.svg`,
+              spriteFilename: `svg-sprites/sprites${config.enabled.cacheBusting ? '_[hash:8]' : ''}.svg`,
             },
           },
           'svgo-loader',
