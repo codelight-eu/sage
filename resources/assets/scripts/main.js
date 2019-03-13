@@ -1,8 +1,9 @@
 // import external dependencies
 import 'jquery';
+import 'custom-event-polyfill';
 
 // Import everything from autoload
-import './autoload/**/*'
+import './autoload/**/*';
 
 // import local dependencies
 import Router from './util/Router';
