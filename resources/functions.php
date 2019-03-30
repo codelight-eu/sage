@@ -48,7 +48,7 @@ if (!class_exists('Roots\\Sage\\Container')) {
 }
 
 if (!class_exists("ACF")) {
-    if (!is_admin()) {
+    if (!is_admin() && !(isset($GLOBALS['pagenow']) && $GLOBALS['pagenow'] === 'wp-login.php')) {
         $sage_error('You must install and activate Advanced Custom Fields.');
     }
 }
