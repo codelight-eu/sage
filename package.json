@@ -32,7 +32,7 @@
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
     "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
     "test": "npm run -s lint",
-    "pot": "mkdir -p i18n && find ./app ./resources ./src -iname \"*.php\" | xargs xgettext --output='i18n/theme.pot' --default-domain='sage' --sort-by-file --language=Python --add-comments=TRANSLATORS --msgid-bugs-address='team@codelight.eu' --force-po --from-code=UTF-8 --copyright-holder='Codelight' -k__ -k_e -k_n -k_x -k_ex -k_nx -kesc_attr__ -kesc_attr_e -kesc_attr_x -kesc_html__ -kesc_html_e -kesc_html_x -k_n_noop -k_nx_noop"
+    "pot": "wp l10n generate --extract-from='./' --domain='sage' --extract-to='resources/i18n'"  
   },
   "engines": {
     "node": ">= 8.0.0"
