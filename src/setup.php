@@ -89,3 +89,11 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-footer'
     ] + $config);
 });
+
+/**
+ * Disable XML-RPC. Note that this still allows accessing the endpoint,
+ * so it should also be disabled via htaccess.
+ */
+add_filter( 'xmlrpc_enabled', function() {
+    return false;
+});
