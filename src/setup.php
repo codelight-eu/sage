@@ -6,6 +6,10 @@
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', \App\asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', \App\asset_path('scripts/main.js'), ['jquery'], null, true);
+    
+    wp_localize_script('sage/main.js', 'theme', [
+        'ajaxurl' => admin_url('admin-ajax.php'),
+    ]);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
