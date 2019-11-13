@@ -101,3 +101,11 @@ add_action('widgets_init', function () {
 add_filter( 'xmlrpc_enabled', function() {
     return false;
 });
+
+/**
+ * Whitelist formats that can be used in content editor
+ */
+add_filter('tiny_mce_before_init', function ($init) {
+    $init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
+    return $init;
+});
