@@ -45,6 +45,13 @@ add_action('after_setup_theme', function () {
      * @link https://github.com/codelight-eu/codelight-wp-cleanup
      */
     add_theme_support('cl-wp-cleanup');
+    
+    // Remove all un-used archives
+    add_filter('cl_remove_archives', function($types) {
+        return array('author', 'date', 'attachment');
+    });
+
+    // Remove useless widgets
     add_filter('cl_remove_widgets', function ($widgets) {
         return ['misc'];
     });
