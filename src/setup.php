@@ -6,7 +6,7 @@
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', \App\asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', \App\asset_path('scripts/main.js'), ['jquery'], null, true);
-    
+
     wp_localize_script('sage/main.js', 'theme', [
         'ajaxurl' => admin_url('admin-ajax.php'),
     ]);
@@ -14,6 +14,23 @@ add_action('wp_enqueue_scripts', function () {
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+
+    // Loads object inline that contains info about enabled features (feature flags)
+    if (!defined('CL_ENABLED_FEATURES') || !is_array(CL_ENABLED_FEATURES)) {
+        return;
+    }
+    $features = [];
+
+    foreach (CL_ENABLED_FEATURES as $feature) {
+        $feature = trim($feature);
+        if ($feature === 'none') {
+            return;
+        }
+        $features[$feature] = true;
+    }
+
+    wp_localize_script('sage/main.js', 'enabledFeatures', $features);
+
 }, 100);
 
 /**
@@ -45,7 +62,7 @@ add_action('after_setup_theme', function () {
      * @link https://github.com/codelight-eu/codelight-wp-cleanup
      */
     add_theme_support('cl-wp-cleanup');
-    
+
     // Remove all un-used archives
     add_filter('cl_remove_archives', function($types) {
         return array('author', 'date', 'attachment');
