@@ -1,3 +1,4 @@
-@function calc_rem($pixels) {
-  @return ($pixels / $root-font-size) + rem;
+// Calculate rem from pixel unit
+@function cr($pixels) {
+  @return ($pixels / $root-font-size) * 1rem;
 }
