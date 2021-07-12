@@ -3,6 +3,7 @@
 namespace Codelight\Theme;
 
 use Codelight\Theme\PostTypes\ExamplePostType;
+use Codelight\Theme\WooCommerce\WooCommerceServiceProvider;
 
 /**
  * This class is responsible for bootstrapping the whole theme.
@@ -19,6 +20,7 @@ class Application
      */
     protected $serviceProviders = [
         ThemeServiceProvider::class,
+        WooCommerceServiceProvider::class,
     ];
 
     /**
@@ -49,7 +51,7 @@ class Application
     {
         $blocks = \Codelight\ACFBlocks\Blocks::getInstance();
         $blocks->init([
-            'namespace'  => "Codelight\Theme\Blocks",
+            'namespace' => "Codelight\Theme\Blocks",
             'blocktypes' => [
                 'ContentBuilder',
             ],
@@ -62,7 +64,7 @@ class Application
      */
     protected function loadServiceProviders()
     {
-        add_filter('codelight/foundation/providers', function(array $providers) {
+        add_filter('codelight/foundation/providers', function (array $providers) {
             return $providers + $this->serviceProviders;
         });
     }
