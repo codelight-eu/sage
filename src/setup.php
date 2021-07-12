@@ -37,9 +37,9 @@ add_action('wp_enqueue_scripts', function () {
  * Register navigation menus
  * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
  */
-add_action('after_setup_theme', function() {
+add_action('after_setup_theme', function () {
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => 'Primary Navigation',
     ]);
 }, 20);
 
@@ -64,7 +64,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('cl-wp-cleanup');
 
     // Remove all un-used archives
-    add_filter('cl_remove_archives', function($types) {
+    add_filter('cl_remove_archives', function ($types) {
         return array('author', 'date', 'attachment');
     });
 
@@ -104,25 +104,25 @@ add_action('after_setup_theme', function () {
 add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
+            'name' => 'Primary',
+            'id' => 'sidebar-primary'
+        ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
+            'name' => 'Footer',
+            'id' => 'sidebar-footer'
+        ] + $config);
 });
 
 /**
  * Disable XML-RPC. Note that this still allows accessing the endpoint,
  * so it should also be disabled via htaccess.
  */
-add_filter( 'xmlrpc_enabled', function() {
+add_filter('xmlrpc_enabled', function () {
     return false;
 });
 
@@ -133,3 +133,22 @@ add_filter('tiny_mce_before_init', function ($init) {
     $init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3';
     return $init;
 });
+
+/**
+ * Disable emoji scripts for better performance
+ */
+add_action('init', function () {
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+});
+
+/**
+ * Remove Gutenberg block library styles and JS from the frontend
+ */
+add_action('wp_enqueue_scripts', function () {
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('wc-block-style'); // Remove WooCommerce block CSS
+}, 100);
