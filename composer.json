@@ -47,7 +47,7 @@
     "roots/sage-lib": "~9.0.9",
     "stoutlogic/acf-builder": "^1.4",
     "jjgrainger/posttypes": "^2.0",
-    "codelight/acf-blocks": "v2.0.1",
+    "codelight/acf-blocks": "v2.1.0",
     "roborourke/wp-l10n-gen": "dev-master"
   },
   "require-dev": {
