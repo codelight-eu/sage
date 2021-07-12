@@ -35,16 +35,15 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
 }
 
 /**
- * Ensure dependencies are loaded
+ * Ensure dependencies are loaded. Allow loading deps from theme vendor dir instead of site repo vendor directory.
  */
-if (!class_exists('Roots\\Sage\\Container')) {
-    if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
-        $sage_error(
-            'You must run <code>composer install</code> from the Sage directory.',
-            'Autoloader not found.'
-        );
-    }
+if (file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
     require_once $composer;
+} else if (!class_exists('Roots\\Sage\\Container')) {
+    $sage_error(
+        'You must run <code>composer install</code> from the site repository directory or Sage theme directory.',
+        'Autoloader not found.'
+    );
 }
 
 if (!class_exists("ACF")) {
