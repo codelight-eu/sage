@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb81cf1c30427c152b6163ca6ada41cd",
+    "content-hash": "a7125f2bd359817036435b33045c9caf",
     "packages": [
         {
             "name": "codelight/acf-blocks",
@@ -39,6 +39,60 @@
                 "source": "https://github.com/codelight-eu/acf-blocks/tree/2.1.0"
             },
             "time": "2021-05-06T07:42:50+00:00"
+        },
+        {
+            "name": "codelight/babelfish",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codelight-eu/babelfish.git",
+                "reference": "ae97409e39742d27bcdcb4349c4017e163245901"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codelight-eu/babelfish/zipball/ae97409e39742d27bcdcb4349c4017e163245901",
+                "reference": "ae97409e39742d27bcdcb4349c4017e163245901",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Codelight\\BabelFish\\": "src/"
+                },
+                "files": [
+                    "helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/codelight-eu/babelfish/issues",
+                "source": "https://github.com/codelight-eu/babelfish/tree/v1.0"
+            },
+            "time": "2020-01-22T19:56:24+00:00"
+        },
+        {
+            "name": "codelight/foundation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.com:codelight/packages/foundation.git",
+                "reference": "c29b5f1648437f44108be1ab2889ac6fd036de90"
+            },
+            "require": {
+                "illuminate/container": "5.6.*",
+                "php": ">=7.0.0"
+            },
+            "default-branch": true,
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Codelight\\Foundation\\": "src/"
+                }
+            },
+            "time": "2019-10-21T10:44:40+00:00"
         },
         {
             "name": "composer/installers",
@@ -2455,12 +2509,16 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "codelight/foundation": 20,
         "roborourke/wp-l10n-gen": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2"
+        "php": ">=7.2",
+        "ext-curl": "*",
+        "ext-simplexml": "*",
+        "ext-xmlwriter": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
