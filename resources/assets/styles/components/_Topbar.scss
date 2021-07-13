@@ -1,0 +1,9 @@
+.Topbar {
+  border-bottom: $border-width solid $border-color;
+}
+
+.Topbar_spaceHolderCol {
+  display: block;
+  padding: 0;
+  flex-grow: 1;
+}

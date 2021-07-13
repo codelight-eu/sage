@@ -18,6 +18,9 @@
 /** Import theme component styles */
 @import "components/wp-classes";
 @import "components/ScalingSvg";
+@import "components/Header";
+@import "components/UtilMenu";
+@import "components/Topbar";
 
 /** Import theme layout styles */
 @import "layouts/tinymce";

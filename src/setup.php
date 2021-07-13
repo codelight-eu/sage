@@ -39,7 +39,9 @@ add_action('wp_enqueue_scripts', function () {
  */
 add_action('after_setup_theme', function () {
     register_nav_menus([
-        'primary_navigation' => 'Primary Navigation',
+        'main_navigation_desktop' => __('Main Navigation Desktop', 'sage'),
+        'main_navigation_mobile'  => __('Main Navigation Mobile', 'sage'),
+        'navigation_topbar'       => __('Navigation Topbar', 'sage'),
     ]);
 }, 20);
 
