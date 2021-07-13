@@ -1,3 +1,5 @@
 .Header {
   border-bottom: $border-width solid $border-color;
+  position: relative;
+  z-index: $zindex-header;
 }

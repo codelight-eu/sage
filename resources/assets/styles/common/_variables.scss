@@ -43,3 +43,13 @@ $grid-columns: 12;
 $grid-gutter-width: 16px;
 
 $mobile-menu-breakpoint: 992px;
+
+// Navbar
+$mobile-navbar-height: 3rem;
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+$zindex-overlayer:                  1005;
+$zindex-header:                     1010;

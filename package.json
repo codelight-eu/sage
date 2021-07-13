@@ -87,6 +87,8 @@
     "bootstrap": "v4.3.1",
     "custom-event-polyfill": "^1.0.6",
     "jquery": "^3.3.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.defaultsdeep": "^4.6.1",
     "popper.js": "^1.14.7"
   }
 }
