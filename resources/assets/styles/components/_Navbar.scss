@@ -1,0 +1,36 @@
+.Navbar_brand {
+  font-size: 3em;
+  margin: $grid-gutter-width / 2;
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.Navbar_menuWrap {
+  background-color: #efefef;
+}
+
+.Navbar_row {
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -$grid-gutter-width / 2;
+  margin-right: -$grid-gutter-width / 2;
+}
+
+.Navbar_col {
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+}
+
+.Navbar_col-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $mobile-menu-breakpoint) {
+  .Navbar_col-menuToggle {
+    display: none;
+  }
+}

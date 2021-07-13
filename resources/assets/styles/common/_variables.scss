@@ -2,24 +2,27 @@
 @import "~bootstrap/scss/functions";
 
 $white: #fff;
-$gray-100: #ccc;
-$gray-200: #999;
-$gray-300: #666;
-$gray-400: #333;
+$gray-100: #efefef;
+$gray-200: #ccc;
+$gray-300: #999;
+$gray-400: #666;
+$gray-500: #333;
 $black: #000;
 
 $blue: #525ddc;
+$teal-dark: #013531;
 
 $theme-colors: (
-  primary: $blue,
-  secondary: $gray-200,
+  primary: $teal-dark,
+  secondary: $gray-300,
 );
 
+$text-color-500: $gray-500;
 $text-color-400: $gray-400;
-$text-color-300: $gray-300;
+$text-on-primary: $white;
 
-$body-bg:                   $white;
-$body-color:                $text-color-400;
+$body-bg: $white;
+$body-color: $text-color-500;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
@@ -27,11 +30,16 @@ $navbar-light-toggler-icon-bg: none;
 
 $root-font-size: 16px;
 
-$font-weight-lighter:         lighter;
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-bold:            700;
-$font-weight-bolder:          bolder;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
 
 $border-width: 1px;
-$border-color: $gray-100;
+$border-color: $gray-200;
+
+$grid-columns: 12;
+$grid-gutter-width: 16px;
+
+$mobile-menu-breakpoint: 992px;

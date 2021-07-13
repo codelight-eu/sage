@@ -1,0 +1,25 @@
+.MainMenu {
+  display: none;
+}
+
+.MainMenu_list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  .menu-item {
+    display: inline-block;
+    vertical-align: top;
+
+    a {
+      display: block;
+      padding: ($grid-gutter-width / 2);
+    }
+  }
+}
+
+@media (min-width: $mobile-menu-breakpoint) {
+  .MainMenu {
+    display: block;
+  }
+}

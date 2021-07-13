@@ -6,4 +6,15 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  .menu-item {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    padding: $grid-gutter-width / 2;
+  }
 }

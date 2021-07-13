@@ -1,4 +1,5 @@
 .Topbar {
+  display: none;
   border-bottom: $border-width solid $border-color;
 }
 
@@ -6,4 +7,10 @@
   display: block;
   padding: 0;
   flex-grow: 1;
+}
+
+@media (min-width: $mobile-menu-breakpoint) {
+  .Topbar {
+    display: block;
+  }
 }

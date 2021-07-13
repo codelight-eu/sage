@@ -1,0 +1,43 @@
+.BurgerButton {
+  font-size: 1rem;
+  color: theme-color("primary");
+  display: block;
+  padding: 9px 6px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: theme-color("primary");
+  }
+}
+
+.BurgerButton_bar {
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  margin-top: 3px;
+  transition: 0.3s;
+  transform: rotate(0);
+}
+
+.BurgerButton_bar-2 {
+  width: 15px;
+}
+
+.BurgerButton_bar:first-child {
+  margin-top: 0;
+}
+
+.BurgerButton.st-close {
+  .BurgerButton_bar-1 {
+    transform: translateY(5px) rotate(44deg);
+  }
+
+  .BurgerButton_bar-2 {
+    opacity: 0;
+  }
+
+  .BurgerButton_bar-3 {
+    transform: translateY(-5px) rotate(-44deg);
+  }
+}

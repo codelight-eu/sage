@@ -1,0 +1,19 @@
+.Search {
+  display: none;
+}
+
+.Search_form {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+
+  button {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $mobile-menu-breakpoint) {
+  .Search {
+    display: block;
+  }
+}

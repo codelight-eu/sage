@@ -10,6 +10,16 @@
 
         <div class="Navbar_col Navbar_col-center Navbar_col-menu"></div>
 
+        <div class="Navbar_col Navbar_col-center Navbar_col-search">
+          @include('partials.search')
+        </div>
+
+        <div class="Navbar_col Navbar_col-center Navbar_col-menu"></div>
+
+        <div class="Navbar_col Navbar_col-right Navbar_col-cart">
+          @include('partials.cart-button')
+        </div>
+
         <div class="Navbar_col Navbar_col-right Navbar_col-menuToggle">
           @include('partials.burger-button', ['classNames' => ['js-mobileMenuPanelToggle']])
         </div>
