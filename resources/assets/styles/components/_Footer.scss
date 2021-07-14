@@ -5,3 +5,13 @@
 .Footer_mainWrap {
   padding: $grid-gutter-width 0;
 }
+
+.Footer_col {
+  flex-basis: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+  .Footer_col {
+    flex-basis: 0;
+  }
+}
