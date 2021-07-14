@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7125f2bd359817036435b33045c9caf",
+    "content-hash": "f4c5d382b179a0c26c99d49e5c6f2870",
     "packages": [
         {
             "name": "codelight/acf-blocks",
@@ -1256,6 +1256,43 @@
                 "source": "https://github.com/roots/sage-lib/tree/master"
             },
             "time": "2018-12-28T01:46:28+00:00"
+        },
+        {
+            "name": "roots/sage-woocommerce",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/sage-woocommerce.git",
+                "reference": "def4d3db371e10b6114c37ec1da67b0e9bceadac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/sage-woocommerce/zipball/def4d3db371e10b6114c37ec1da67b0e9bceadac",
+                "reference": "def4d3db371e10b6114c37ec1da67b0e9bceadac",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/woocommerce.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Mejta",
+                    "email": "daniel@mejta.net"
+                }
+            ],
+            "description": "WooCommerce integration for Sage 9",
+            "support": {
+                "issues": "https://github.com/roots/sage-woocommerce/issues",
+                "source": "https://github.com/roots/sage-woocommerce/tree/master"
+            },
+            "time": "2020-01-11T02:28:25+00:00"
         },
         {
             "name": "stoutlogic/acf-builder",
