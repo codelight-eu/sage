@@ -1,0 +1,10 @@
+.Bottombar {
+  padding: ($grid-gutter-width / 2) 0;
+  border-top: $border-width solid $border-color;
+}
+
+.Bottombar_spaceHolderCol {
+  display: block;
+  padding: 0;
+  flex-grow: 1;
+}
