@@ -3,9 +3,7 @@
     <div class="container">
       <div class="Navbar_row row flex-nowrap">
         <div class="Navbar_col Navbar_col-left Navbar_col-brand">
-          <a href="{{ home_url('/') }}" class="Navbar_brand">
-            <i><strong>Brand</strong></i>
-          </a>
+          @include("partials.brand")
         </div>
 
         <div class="Navbar_col Navbar_col-center Navbar_col-menu"></div>

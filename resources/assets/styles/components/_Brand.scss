@@ -1,0 +1,16 @@
+.Brand {
+  font-size: 2em;
+  margin: ($grid-gutter-width / 2) 0;
+  display: inline-block;
+  vertical-align: top;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $mobile-menu-breakpoint) {
+  .Brand {
+    font-size: 3em;
+  }
+}

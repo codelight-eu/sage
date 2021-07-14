@@ -24,6 +24,7 @@
 @import "components/MainMenu";
 @import "components/Search";
 @import "components/Navbar";
+@import "components/Brand";
 @import "components/CartButton";
 @import "components/BurgerButton";
 @import "components/MobileMenuPanel";
@@ -31,6 +32,8 @@
 @import "components/MainMenuMobile";
 @import "components/Bottombar";
 @import "components/CreatorBrand";
+@import "components/Footer";
+@import "components/FooterMenu";
 
 /** Import theme layout styles */
 @import "layouts/tinymce";

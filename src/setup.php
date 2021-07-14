@@ -42,6 +42,7 @@ add_action('after_setup_theme', function () {
         'main_navigation_desktop' => __('Main Navigation Desktop', 'sage'),
         'main_navigation_mobile'  => __('Main Navigation Mobile', 'sage'),
         'navigation_topbar'       => __('Navigation Topbar', 'sage'),
+        'navigation_footer'       => __('Navigation Footer', 'sage'),
     ]);
 }, 20);
 
