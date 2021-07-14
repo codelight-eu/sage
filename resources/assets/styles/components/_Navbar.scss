@@ -1,6 +1,6 @@
 .Navbar_brand {
   font-size: 2em;
-  margin: $grid-gutter-width / 2;
+  margin: ($grid-gutter-width / 2) 0;
   display: block;
 
   &:hover {

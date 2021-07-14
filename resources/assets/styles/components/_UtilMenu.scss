@@ -10,11 +10,12 @@
   .menu-item {
     display: inline-block;
     vertical-align: top;
+    margin-left: $grid-gutter-width;
   }
 
   a {
     display: inline-block;
     vertical-align: top;
-    padding: $grid-gutter-width / 2;
+    padding: ($grid-gutter-width / 2) 0;
   }
 }
