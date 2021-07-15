@@ -15,9 +15,9 @@ $teal-300: #025f5a;
 $teal-500: #013531;
 
 $theme-colors: (
-  primary: $teal-300,
+  primary: $teal-500,
   primary100: $teal-100,
-  primary500: $teal-500,
+  primary500: $teal-300,
   secondary: $gray-300,
   secondary100: $gray-100,
   secondary400: $gray-400,
@@ -45,11 +45,6 @@ $font-weight-bolder: bolder;
 $border-width: 1px;
 $border-color: $gray-200;
 
-$grid-columns: 12;
-$grid-gutter-width: 16px;
-
-$mobile-menu-breakpoint: 992px;
-
 // Navbar
 $mobile-navbar-height: 3rem;
 
@@ -67,3 +62,42 @@ $zindex-header:                     1010;
 $border-radius:               0.25rem;
 
 $transition-duration-short:          0.2s;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1248px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;
+$grid-gutter-width: 16px;
+$grid-item-min-width: 200px;
+
+$mobile-menu-breakpoint: 992px;
