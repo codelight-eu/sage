@@ -1,0 +1,9 @@
+/*
+ * This file contains styles for the single product page
+ */
+
+.woocommerce div.product {
+  .p.price {
+    color: theme-color("primary");
+  }
+}

@@ -11,6 +11,7 @@
 
   .woocommerce-breadcrumb {
     color: theme-color("secondary");
+    margin-bottom: $grid-gutter-width * 2;
 
     a {
       color: theme-color("primary100");

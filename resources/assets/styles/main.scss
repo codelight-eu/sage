@@ -14,6 +14,7 @@
 /** Import theme common styles */
 @import "common/global";
 @import "common/functions";
+@import "common/typography";
 
 /** Import theme component styles */
 @import "components/wp-classes";
@@ -43,3 +44,4 @@
 /** Import WooCoommerce styles */
 @import "woocommerce/woocommerce";
 @import "woocommerce/products";
+@import "woocommerce/product";
