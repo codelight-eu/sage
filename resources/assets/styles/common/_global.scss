@@ -5,6 +5,9 @@ main.main {
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
+input[type="phone"],
+input[type="number"],
 select,
 textarea {
   border: $border-width solid $border-color;
