@@ -2,3 +2,11 @@ main.main {
   padding-top: $grid-gutter-width * 2;
   padding-bottom: $grid-gutter-width * 2;
 }
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  border: $border-width solid $border-color;
+  padding: 0.25em 0.5em;
+}
