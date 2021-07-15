@@ -1,0 +1,35 @@
+.woocommerce ul.products {
+  li.product {
+    border: $border-width solid $border-color;
+    padding: 0.5rem;
+    text-align: center;
+
+    a img {
+      margin-bottom: 0.5em;
+    }
+
+    .woocommerce-loop-product__title {
+      padding: 0;
+      margin-bottom: 1em;
+      color: $body-color;
+    }
+
+    .price {
+      color: theme-color("primary");
+      font-weight: $font-weight-bold;
+
+      del {
+        color: $text-muted;
+        opacity: 0.5;
+        font-weight: $font-weight-normal;
+        margin-right: 0.5em;
+      }
+    }
+
+    .button {
+      @extend .Button;
+
+      margin-top: 0.5em;
+    }
+  }
+}

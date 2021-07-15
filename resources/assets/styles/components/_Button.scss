@@ -1,0 +1,62 @@
+.Button {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-appearance: none;
+  border-radius: $border-radius;
+  text-align: center;
+  font-weight: $font-weight-normal;
+  color: $text-on-primary;
+  background-color: theme-color("primary");
+  transition: $transition-duration-short background-color, $transition-duration-short border-color;
+  box-shadow: none;
+  border: 1px solid theme-color("primary");
+  font-size: 16px;
+  min-width: 98px;
+  padding: 6px 16px;
+  text-decoration: none;
+
+  &.disabled {
+    background-color: theme-color("primary");
+
+    &:hover {
+      background-color: theme-color("primary-dark");
+      border-color: theme-color("primary500");
+    }
+  }
+}
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+  text-decoration: none;
+  color: $text-on-primary;
+  outline: none;
+}
+
+.Button:hover {
+  background-color: theme-color("primary500");
+  border-color: theme-color("primary500");
+}
+
+.Button:focus {
+  box-shadow: 0 0 6px theme-color("primary");
+}
+
+.Button:active {
+  box-shadow: 0 0 6px theme-color("primary");
+  background-color: theme-color("primary500");
+  border-color: theme-color("primary500");
+}
+
+.Button:disabled {
+  background-color: theme-color("primary100");
+  border-color: theme-color("primary100");
+}
+
+@include media-breakpoint-up(md) {
+  .Button {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+    min-width: 9.8125rem;
+  }
+}
