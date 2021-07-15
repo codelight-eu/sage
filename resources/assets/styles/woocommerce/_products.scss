@@ -35,6 +35,15 @@
       @extend .Button;
 
       margin-top: 0.5em;
+
+      &.loading {
+        padding-right: 2em;
+
+        &::after {
+          top: 0.4em;
+          right: 0.5em;
+        }
+      }
     }
   }
 
