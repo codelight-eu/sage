@@ -1,7 +1,7 @@
 <div class="Search">
   <form
     action="{{ esc_url(home_url('/')) }}"
-    class="Search_form"
+    class="Search_form Form"
   >
     <input
       type="text"

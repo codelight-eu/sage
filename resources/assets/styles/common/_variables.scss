@@ -63,6 +63,14 @@ $border-radius:               0.25rem;
 
 $transition-duration-short:          0.2s;
 
+// Form elements
+$form-field-color:              $body-color;
+$form-field-bg:                 $white;
+$form-field-height:             auto;
+$form-field-border-width:       1px;
+$form-field-border-color:       $border-color;
+$form-field-border-radius:      0;
+
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,

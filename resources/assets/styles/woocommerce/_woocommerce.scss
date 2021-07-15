@@ -8,4 +8,12 @@
   a.added_to_cart {
     display: block;
   }
+
+  .woocommerce-breadcrumb {
+    color: theme-color("secondary");
+
+    a {
+      color: theme-color("primary100");
+    }
+  }
 }

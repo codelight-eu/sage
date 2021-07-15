@@ -1,0 +1,71 @@
+.Form {
+  font-size: 1rem;
+
+  select,
+  textarea,
+  .select2-container--default .select2-selection--single,
+  input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    color: $form-field-color;
+    font-size: 1em;
+    width: 100%;
+    display: block;
+    background-color: $form-field-bg;
+    border: $form-field-border-width solid $form-field-border-color;
+    border-radius: $form-field-border-radius;
+    padding: 0.25em 0.5em;
+    line-height: 1.5;
+    box-shadow: none;
+    height: auto;
+  }
+
+  input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    height: $form-field-height;
+    -webkit-appearance: none;
+  }
+
+  textarea {
+    height: 96px;
+  }
+
+  label {
+    font-size: 1em;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0.25rem;
+    color: currentColor;
+  }
+
+  .select2-selection__rendered {
+    padding: 0.25em 0.5em;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-width: 0.125rem 0.125rem 0 0;
+      border-style: solid;
+      border-color: currentColor;
+      width: 0.5625rem;
+      height: 0.5625rem;
+      top: 1.125rem;
+      right: 1.25rem;
+      transform: rotate(135deg);
+    }
+  }
+
+  .select2-container--open .select2-selection__rendered::after {
+    transform: rotate(-45deg);
+    top: 1.375rem;
+  }
+
+  .select2-selection__arrow {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .Form {
+    textarea {
+      height: 150px;
+    }
+  }
+}
