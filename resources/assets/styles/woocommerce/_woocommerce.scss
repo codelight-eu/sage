@@ -17,4 +17,13 @@
       color: theme-color("primary100");
     }
   }
+
+  table.shop_attributes {
+    border-top: $border-width solid $border-color;
+
+    th,
+    td {
+      border-bottom: $border-width solid $border-color;
+    }
+  }
 }

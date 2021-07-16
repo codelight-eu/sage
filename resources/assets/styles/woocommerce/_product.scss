@@ -3,7 +3,62 @@
  */
 
 .woocommerce div.product {
-  .p.price {
+  div.images {
+    margin-bottom: 1em;
+  }
+
+  .product_title {
+    margin-bottom: 1rem;
+  }
+
+  p.price,
+  span.price {
+    margin-bottom: 0;
+    font-size: 1rem;
     color: theme-color("primary");
+
+    del {
+      color: theme-color("secondary");
+    }
+  }
+
+  form.cart {
+    @extend .Form;
+
+    margin-top: 2rem;
+
+    .button {
+      @extend .Button;
+
+      float: none;
+    }
+
+    div.quantity {
+      margin-right: 0.5em;
+      max-width: 7em;
+    }
+
+    .variations {
+      margin-bottom: 3rem;
+
+      label {
+        margin-bottom: 0;
+      }
+
+      select {
+        max-width: 7em;
+      }
+    }
+  }
+
+  .product_meta {
+    & > span {
+      display: block;
+    }
+  }
+
+  .woocommerce-tabs ul.tabs li {
+    border-color: $border-color;
+    background-color: theme-color("secondary100");
   }
 }
