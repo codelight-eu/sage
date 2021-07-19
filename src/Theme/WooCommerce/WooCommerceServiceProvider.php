@@ -5,6 +5,7 @@ namespace Codelight\Theme\WooCommerce;
 use Codelight\Foundation\Abstracts\ServiceProvider;
 use Codelight\Foundation\Abstracts\ServiceProviderInterface;
 use Codelight\Theme\WooCommerce\CachedCart\CachedCart;
+use Codelight\Theme\WooCommerce\Controllers\Cart;
 use Codelight\Theme\WooCommerce\CachedCart\WpRocket;
 
 class WooCommerceServiceProvider extends ServiceProvider implements ServiceProviderInterface
@@ -24,6 +25,7 @@ class WooCommerceServiceProvider extends ServiceProvider implements ServiceProvi
     public $autoload = [
         Admin::class,
         CachedCart::class,
+        Cart::class,
         WpRocket::class,
     ];
 }

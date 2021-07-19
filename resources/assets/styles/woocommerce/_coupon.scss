@@ -1,0 +1,22 @@
+.woocommerce {
+  table.cart {
+    td.actions {
+      .coupon {
+        max-width: 21.875em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+#coupon_code {
+  margin-right: 0;
+
+  & + button {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    min-width: 8.75em;
+  }
+}

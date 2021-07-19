@@ -30,4 +30,62 @@
   form.woocommerce-ordering {
     @extend .Form;
   }
+
+  #respond input#submit,
+  a.button,
+  button.button,
+  input.button {
+    @extend .Button;
+
+    &:disabled[disabled] {
+      padding: 4px 8px;
+      color: $text-on-primary;
+
+      &:hover {
+        color: $text-on-primary;
+        background-color: theme-color("primary500");
+        border-color: theme-color("primary500");
+      }
+    }
+  }
+
+  table.shop_table {
+    border: none;
+
+    .product-quantity {
+      width: 6.25rem;
+    }
+  }
+
+  a.remove {
+    text-align: left;
+    color: theme-color("primary") !important;
+
+    &:hover {
+      color: theme-color("primary100") !important;
+      background-color: transparent;
+    }
+  }
+
+  table.cart {
+    td.actions {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.PageHeader + .woocommerce {
+  margin-top: 3.0625rem;
+}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  background-color: theme-color("secondary100");
+  border-top-color: theme-color("primary");
+
+  &::before {
+    color: theme-color("primary");
+  }
 }
