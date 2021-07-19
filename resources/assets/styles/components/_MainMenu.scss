@@ -10,6 +10,7 @@
   .menu-item {
     display: inline-block;
     vertical-align: top;
+    margin-top: 0;
     margin-right: $grid-gutter-width;
 
     a {

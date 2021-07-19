@@ -4,6 +4,8 @@
   list-style-type: none;
 
   .menu-item {
+    margin-top: 0;
+
     a {
       padding: ($grid-gutter-width / 2) 0;
       display: block;
